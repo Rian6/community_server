@@ -1,0 +1,55 @@
+Tentando iniciar thread...
+Thread iniciada!
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.2.1.RELEASE)
+
+2021-12-07 15:26:06.518  INFO 4068 --- [           main] br.com.community.Application             : Starting Application on DESKTOP-VEQV1N1 with PID 4068 (C:\Users\Mendes\Desktop\community-main\SERVIDOR\target\classes started by Mendes in C:\Users\Mendes\Desktop\community-main\SERVIDOR)
+2021-12-07 15:26:06.523  INFO 4068 --- [           main] br.com.community.Application             : No active profile set, falling back to default profiles: default
+2021-12-07 15:26:08.236  INFO 4068 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-12-07 15:26:08.285  INFO 4068 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 34ms. Found 0 repository interfaces.
+2021-12-07 15:26:08.922  INFO 4068 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-12-07 15:26:09.698  INFO 4068 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-12-07 15:26:09.731  INFO 4068 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-12-07 15:26:09.731  INFO 4068 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2021-12-07 15:26:09.962  INFO 4068 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-12-07 15:26:09.962  INFO 4068 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3343 ms
+2021-12-07 15:26:10.374  INFO 4068 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-12-07 15:26:10.459  INFO 4068 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.5.3.Final
+2021-12-07 15:26:10.681  INFO 4068 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-12-07 15:26:10.843  INFO 4068 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-12-07 15:26:11.333  INFO 4068 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-12-07 15:26:11.417  INFO 4068 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2021-12-07 15:26:12.750  INFO 4068 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-12-07 15:26:12.760  INFO 4068 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-12-07 15:26:13.653  WARN 4068 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-12-07 15:26:13.888  INFO 4068 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-12-07 15:26:14.669  INFO 4068 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-12-07 15:26:14.675  INFO 4068 --- [           main] br.com.community.Application             : Started Application in 9.001 seconds (JVM running for 11.181)
+2021-12-07 15:26:19.800  INFO 4068 --- [nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-12-07 15:26:19.801  INFO 4068 --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-12-07 15:26:19.836  INFO 4068 --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 35 ms
+2021-12-07 15:26:20.040  WARN 4068 --- [nio-8080-exec-2] org.hibernate.orm.connections.pooling    : HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2021-12-07 15:26:20.041  INFO 4068 --- [nio-8080-exec-2] org.hibernate.orm.connections.pooling    : HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/community]
+2021-12-07 15:26:20.041  INFO 4068 --- [nio-8080-exec-2] org.hibernate.orm.connections.pooling    : HHH10001001: Connection properties: {password=****, user=postgres}
+2021-12-07 15:26:20.042  INFO 4068 --- [nio-8080-exec-2] org.hibernate.orm.connections.pooling    : HHH10001003: Autocommit mode: false
+2021-12-07 15:26:20.045  INFO 4068 --- [nio-8080-exec-2] .c.i.DriverManagerConnectionProviderImpl : HHH000115: Hibernate connection pool size: 20 (min=1)
+2021-12-07 15:26:20.165  INFO 4068 --- [nio-8080-exec-2] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2021-12-07 15:26:20.448  INFO 4068 --- [nio-8080-exec-2] org.hibernate.orm.connections.access     : HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@434e9ac8] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+Hibernate: select usuario0_.id as id1_6_, usuario0_.login as login2_6_, usuario0_.nome as nome3_6_, usuario0_.senha as senha4_6_ from usuario usuario0_ where usuario0_.login=? and usuario0_.senha=?
+Hibernate: select usuario0_.id as id1_6_, usuario0_.login as login2_6_, usuario0_.nome as nome3_6_, usuario0_.senha as senha4_6_ from usuario usuario0_ where usuario0_.login=? and usuario0_.senha=?
+Hibernate: select usuario0_.id as id1_6_, usuario0_.login as login2_6_, usuario0_.nome as nome3_6_, usuario0_.senha as senha4_6_ from usuario usuario0_ where usuario0_.login=? and usuario0_.senha=?
+Hibernate: select usuario0_.id as id1_6_, usuario0_.login as login2_6_, usuario0_.nome as nome3_6_, usuario0_.senha as senha4_6_ from usuario usuario0_ where usuario0_.login=? and usuario0_.senha=?
+Hibernate: select usuario0_.id as id1_6_, usuario0_.login as login2_6_, usuario0_.nome as nome3_6_, usuario0_.senha as senha4_6_ from usuario usuario0_ where usuario0_.login=?
+Hibernate: select nextval ('hibernate_sequence')
+Hibernate: insert into usuario (login, nome, senha, id) values (?, ?, ?, ?)
+Hibernate: select usuario0_.id as id1_6_, usuario0_.login as login2_6_, usuario0_.nome as nome3_6_, usuario0_.senha as senha4_6_ from usuario usuario0_ where usuario0_.login=? and usuario0_.senha=?
+Hibernate: select pessoa0_.id as id1_2_, pessoa0_.cpf_cnpj as cpf_cnpj2_2_, pessoa0_.email as email3_2_, pessoa0_.nome as nome4_2_, pessoa0_.nome_fantasia as nome_fan5_2_, pessoa0_.id_pessoa_endereco as id_pesso7_2_, pessoa0_.telefone as telefone6_2_ from pessoa pessoa0_
+Hibernate: select produto0_.id as id1_4_0_, produtoima1_.id as id1_5_1_, produto0_.codigo_barra as codigo_b2_4_0_, produto0_.descricao as descrica3_4_0_, produto0_.nome as nome4_4_0_, produto0_.preco as preco5_4_0_, produto0_.id_produto_imagem as id_produ7_4_0_, produto0_.status as status6_4_0_, produtoima1_.arquivo_base_64 as arquivo_2_5_1_, produtoima1_.nome_arquivo as nome_arq3_5_1_, produtoima1_.tamanho as tamanho4_5_1_, produtoima1_.tipo as tipo5_5_1_ from produto produto0_ left outer join produto_imagem produtoima1_ on produto0_.id_produto_imagem=produtoima1_.id
+Hibernate: select pedido0_.id as id1_0_0_, usuario1_.id as id1_6_1_, pessoa2_.id as id1_2_2_, pedido0_.id_cliente as id_clien2_0_0_, pedido0_.id_vendedor as id_vende3_0_0_, usuario1_.login as login2_6_1_, usuario1_.nome as nome3_6_1_, usuario1_.senha as senha4_6_1_, pessoa2_.cpf_cnpj as cpf_cnpj2_2_2_, pessoa2_.email as email3_2_2_, pessoa2_.nome as nome4_2_2_, pessoa2_.nome_fantasia as nome_fan5_2_2_, pessoa2_.id_pessoa_endereco as id_pesso7_2_2_, pessoa2_.telefone as telefone6_2_2_ from pedido pedido0_ left outer join usuario usuario1_ on pedido0_.id_vendedor=usuario1_.id left outer join pessoa pessoa2_ on pedido0_.id_cliente=pessoa2_.id
+Hibernate: select produto0_.id as id1_4_0_, produtoima1_.id as id1_5_1_, produto0_.codigo_barra as codigo_b2_4_0_, produto0_.descricao as descrica3_4_0_, produto0_.nome as nome4_4_0_, produto0_.preco as preco5_4_0_, produto0_.id_produto_imagem as id_produ7_4_0_, produto0_.status as status6_4_0_, produtoima1_.arquivo_base_64 as arquivo_2_5_1_, produtoima1_.nome_arquivo as nome_arq3_5_1_, produtoima1_.tamanho as tamanho4_5_1_, produtoima1_.tipo as tipo5_5_1_ from produto produto0_ left outer join produto_imagem produtoima1_ on produto0_.id_produto_imagem=produtoima1_.id

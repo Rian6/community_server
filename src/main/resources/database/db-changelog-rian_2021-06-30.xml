@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog logicalFilePath="db.changelog-master.xml" xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <preConditions>  
+        <runningAs  username="postgres"/>  
+    </preConditions>  
+
+    <changeSet id="2139832498"  author="rian">  
+        <createTable  tableName="usuario">  
+            <column  name="id"  type="int"  autoIncrement="true">  
+                <constraints  primaryKey="true"  nullable="false"/>  
+            </column>  
+            <column  name="nome"   type="varchar"/>
+            <column  name="login"  type="varchar"/>
+            <column  name="senha"  type="varchar"/>
+        </createTable>  
+    </changeSet>  
+    
+    <changeSet id="30546043094"  author="rian">  
+        <createTable  tableName="produto">  
+            <column  name="id"  type="int"  autoIncrement="true">  
+                <constraints  primaryKey="true"  nullable="false"/>  
+            </column>  
+            <column  name="nome"  type="varchar"/>  
+            <column  name="descricao"  type="varchar"/>
+            <column  name="codigo_barra"  type="varchar"/>
+            <column  name="preco"  type="numeric"/>
+            <column  name="status"  type="varchar"/>  
+        </createTable>  
+    </changeSet> 
+    
+</databaseChangeLog>

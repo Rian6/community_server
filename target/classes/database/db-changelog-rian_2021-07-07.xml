@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog logicalFilePath="db.changelog-master.xml" xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <preConditions>  
+        <runningAs  username="postgres"/>  
+    </preConditions>  
+
+    <changeSet id="234235433465"  author="rian">  
+        <createTable  tableName="pessoa_endereco">  
+            <column  name="id"  type="int"  autoIncrement="true">  
+                <constraints  primaryKey="true"  nullable="false"/>  
+            </column>  
+            <column  name="id_cidade"   type="int"/>
+            <column  name="endereco"   type="varchar"/>
+            <column  name="complemento"   type="varchar"/>
+            <column  name="numero"   type="varchar"/>
+            <column  name="cep"   type="varchar"/>
+        </createTable>  
+    </changeSet>  
+    
+    <changeSet id="30546043123"  author="rian">  
+        <createTable  tableName="pessoa">  
+            <column  name="id"  type="int"  autoIncrement="true">  
+                <constraints  primaryKey="true"  nullable="false"/>  
+            </column>  
+            <column  name="id_pessoa_endereco"  type="int"/>
+            <column  name="nome"  type="varchar"/>
+            <column  name="nome_fantasia"  type="varchar"/>
+            <column  name="cpf_cnpj"  type="varchar"/>
+            <column  name="telefone"  type="varchar"/>
+            <column  name="email"  type="varchar"/>
+        </createTable>  
+    </changeSet>  
+            
+    <changeSet author="rian" id="6574564566545">
+        <addForeignKeyConstraint baseColumnNames="id_pessoa_endereco" baseTableName="pessoa" constraintName="fk_pessoa_pessoa_endereco" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="pessoa_endereco"/>
+    </changeSet>
+    
+    <changeSet author="rian" id="15893455431-7">
+        <addForeignKeyConstraint baseColumnNames="id_cliente" baseTableName="pedido" constraintName="fk_pedido_pessoa" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="pessoa"/>
+    </changeSet>
+          
+</databaseChangeLog>
