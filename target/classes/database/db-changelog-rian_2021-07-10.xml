@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog logicalFilePath="db.changelog-master.xml" xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <preConditions>  
+        <runningAs  username="postgres"/>  
+    </preConditions>  
+
+    <changeSet id="543657679879"  author="rian">  
+        <createTable  tableName="pedido_item">  
+            <column  name="id"  type="int"  autoIncrement="true">  
+                <constraints  primaryKey="true"  nullable="false"/>  
+            </column>  
+            <column  name="id_pedido"   type="int"/>
+            <column  name="id_produto"   type="int"/>
+        </createTable>  
+    </changeSet>  
+    
+    <changeSet author="rian" id="87987964563456">
+        <addForeignKeyConstraint baseColumnNames="id_pedido" baseTableName="pedido_item" constraintName="fk_pedido_item_pedido" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="pedido"/>
+    </changeSet>
+    
+    <changeSet author="rian" id="896843555431-7">
+        <addForeignKeyConstraint baseColumnNames="id_produto" baseTableName="pedido_item" constraintName="fk_pedido_item_produto" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="produto"/>
+    </changeSet>
+</databaseChangeLog>

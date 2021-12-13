@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog logicalFilePath="db.changelog-master.xml" xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <preConditions>  
+        <runningAs  username="postgres"/>  
+    </preConditions>  
+    
+    <changeSet id="3546423423534"  author="rian">  
+        <createTable  tableName="produto_imagem">  
+            <column  name="id"  type="int"  autoIncrement="true">  
+                <constraints  primaryKey="true"  nullable="false"/>  
+            </column>  
+            <column  name="arquivo_base_64"  type="varchar"/>  
+            <column  name="nome_arquivo"  type="varchar"/>
+            <column  name="tamanho"  type="varchar"/>
+            <column  name="tipo"  type="varchar"/> 
+        </createTable>  
+    </changeSet> 
+    
+    <changeSet author="rian" id="167843534321-6">    
+        <addColumn
+            schemaName="public"
+            tableName="produto">
+            <column  name="id_produto_imagem" type="int"/>
+        </addColumn>
+    </changeSet>
+        
+    <changeSet author="rian" id="167867867741-6">
+        <addForeignKeyConstraint 
+            baseColumnNames="id_produto_imagem" 
+            baseTableName="produto" 
+            constraintName="fk_produto_produto_imagem" 
+            deferrable="false" 
+            initiallyDeferred="false" 
+            referencedColumnNames="id" 
+            referencedTableName="produto_imagem"/>
+    </changeSet>
+</databaseChangeLog>

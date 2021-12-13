@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+        <action>
+            <actionName>CUSTOM-Liquibase status</actionName>
+            <displayName>Liquibase status</displayName>
+            <goals>
+                <goal>liquibase:status</goal>
+            </goals>
+        </action>
+        <action>
+            <actionName>CUSTOM-Liquibase diff</actionName>
+            <displayName>Liquibase diff</displayName>
+            <goals>
+                <goal>liquibase:diff</goal>
+            </goals>
+        </action>
+        <action>
+            <actionName>CUSTOM-Liquibase update</actionName>
+            <displayName>Liquibase update</displayName>
+            <goals>
+                <goal>liquibase:update</goal>
+            </goals>
+        </action>
+        <action>
+            <actionName>CUSTOM-DependÃƒÂªncias</actionName>
+            <displayName>DependÃƒÂªncias</displayName>
+            <goals>
+                <goal>dependency:tree</goal>
+            </goals>
+        </action>
+        <action>
+            <actionName>CUSTOM-Liquibase rollback</actionName>
+            <displayName>Liquibase rollback</displayName>
+            <goals>
+                <goal>liquibase:rollback</goal>
+            </goals>
+            <properties>
+                <liquibase.rollbackCount>1</liquibase.rollbackCount>
+            </properties>
+        </action>
+        <action>
+            <actionName>run</actionName>
+            <packagings>
+                <packaging>jar</packaging>
+            </packagings>
+            <goals>
+                <goal>process-classes</goal>
+                <goal>org.codehaus.mojo:exec-maven-plugin:3.0.0:exec</goal>
+            </goals>
+            <properties>
+                <exec.vmArgs></exec.vmArgs>
+                <exec.args>${exec.vmArgs} -classpath %classpath ${exec.mainClass} ${exec.appArgs}</exec.args>
+                <exec.appArgs></exec.appArgs>
+                <exec.mainClass>br.com.community.Application</exec.mainClass>
+                <exec.executable>java</exec.executable>
+            </properties>
+        </action>
+        <action>
+            <actionName>debug</actionName>
+            <packagings>
+                <packaging>jar</packaging>
+            </packagings>
+            <goals>
+                <goal>process-classes</goal>
+                <goal>org.codehaus.mojo:exec-maven-plugin:3.0.0:exec</goal>
+            </goals>
+            <properties>
+                <exec.vmArgs>-agentlib:jdwp=transport=dt_socket,server=n,address=${jpda.address}</exec.vmArgs>
+                <exec.args>${exec.vmArgs} -classpath %classpath ${exec.mainClass} ${exec.appArgs}</exec.args>
+                <exec.appArgs></exec.appArgs>
+                <exec.mainClass>br.com.community.Application</exec.mainClass>
+                <exec.executable>java</exec.executable>
+                <jpda.listen>true</jpda.listen>
+            </properties>
+        </action>
+    </actions>

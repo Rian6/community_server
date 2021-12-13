@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog logicalFilePath="db.changelog-master.xml" xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <preConditions>  
+        <runningAs  username="postgres"/>  
+    </preConditions>  
+
+    <changeSet id="43556564"  author="rian">  
+        <createTable  tableName="pedido">  
+            <column  name="id"  type="int"  autoIncrement="true">  
+                <constraints  primaryKey="true"  nullable="false"/>  
+            </column>  
+            <column  name="id_vendedor"   type="int"/>
+            <column  name="id_cliente"   type="int"/>
+        </createTable>  
+    </changeSet>  
+    <changeSet author="rian" id="1589502022741-6">
+        <addForeignKeyConstraint baseColumnNames="id_vendedor" baseTableName="pedido" constraintName="fk_pedido_usuario" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="usuario"/>
+    </changeSet>
+</databaseChangeLog>
