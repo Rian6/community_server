@@ -60,4 +60,15 @@ public class ProdutoRestController {
         String json = g.toJson(produtos);
         return json;
     }
+
+    @PostMapping("/produto/buscarPorCodigo")
+    @ResponseBody
+    public String buscarPorCodigo(@RequestBody String codigo) {
+        Gson g = new GsonBuilder().create();
+        String codigoProduto = g.fromJson(codigo, String.class);
+        Produto produto = produtoService.buscarPorCodigo(codigoProduto);
+
+        String json = g.toJson(produto);
+        return json;
+    }
 }

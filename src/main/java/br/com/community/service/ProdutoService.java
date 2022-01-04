@@ -26,7 +26,7 @@ public class ProdutoService {
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
 
             transaction = session.beginTransaction();
-            
+
             session.save(produto.getProdutoImagem());
             session.save(produto);
 
@@ -74,10 +74,27 @@ public class ProdutoService {
         StringBuilder sql = new StringBuilder();
         sql.append("SELECT p FROM Produto p          \n");
         sql.append("LEFT JOIN FETCH p.produtoImagem pi\n");
-        sql.append("WHERE p.nome LIKE '%"+nome+"%'   \n");
-        
+        sql.append("WHERE p.nome LIKE '%" + nome + "%'   \n");
+
         Query query = session.createQuery(sql.toString());
-        
+
         return query.getResultList();
+    }
+
+    public Produto buscarPorCodigo(String codigo) {
+        Session session = HibernateUtil.getSessionFactory().openSession();
+
+        StringBuilder sql = new StringBuilder();
+        sql.append("SELECT p FROM Produto p                     \n");
+        sql.append("LEFT JOIN FETCH p.produtoImagem pi          \n");
+        sql.append("WHERE p.codigoBarra = '" + codigo + "'   \n");
+
+        Query query = session.createQuery(sql.toString());
+
+        Produto produto = query.getResultList() == null || query.getResultList().isEmpty()
+                ? null
+                : (Produto) query.getResultList().get(0);
+
+        return produto;
     }
 }

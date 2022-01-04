@@ -68,7 +68,14 @@ public class Controlador extends javax.swing.JFrame {
             }
         });
         
-        System.out.println("Tentando iniciar thread...");
+        System.out.println("VAI TOMAR NO CU PAPA PIZZA\n" +
+"……..…../´¯/)……….. (\\¯`\\\n" +
+"…………/….//……….. …\\\\….\\\n" +
+"………../….//………… ….\\\\….\\\n" +
+"…../´¯/…./´¯\\………../¯ `\\….\\¯`\\\n" +
+".././…/…./…./.|_……_| .\\….\\….\\…\\.\\..\n" +
+"(.(….(….(…./.)..)..(..(. \\….)….)….).)\n" +
+".\\…………….\\/…/….\\. ..\\/………");
         atualizaHora.start();
     }
 
